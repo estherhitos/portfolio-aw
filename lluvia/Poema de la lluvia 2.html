@@ -7,7 +7,7 @@
     <title>Poema de la lluvia 2</title>
     <style>
 
-        #div1 { background: url("imagenes_mias/circulo.webp");
+        #div1 { background-image: url("imagenes_mias/circulo.webp");
                 border-radius: 2px;
                 margin: 1%;
                 padding: 1%; 
@@ -15,7 +15,7 @@
                 margin: auto;
                 width: 80%;}
        
-        #wrapper {background-image: url("imagenes_mias/señor.webp" );
+        #wrapper {background-image:url("imagenes_mias/señor.webp"  );
         margin: 4%;
         padding: 1%;
         background-position:center;
@@ -32,7 +32,9 @@
         }
         h1 {color:rgb(0, 4, 12);}
         body {background-image: url("imagenes_mias/fondito.png");}
-        
+        @media only screen and(max-width:500px){
+                #div1 {width:100%;}
+        }
         
        
     </style>

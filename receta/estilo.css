@@ -12,7 +12,8 @@ body {background-image:url(imagen/escalivada4.jpg);
             border-radius: 10px;
             font-family: 'Lobster', cursive;
             font-size: 14px;
-            text-shadow: 3px 2px rgb(167, 243, 180); }
+            text-shadow: 3px 2px rgb(167, 243, 180);
+             }
 ul {list-style-image: url("imagen/pimiento.jpg");}
 h1 {text-align: center;
     font-family: 'Permanent Marker', cursive;
@@ -40,4 +41,6 @@ iframe {display: block;
 /*vamos a utilizar el recurso llamado media query (se trata de incluir una especie de "if" y una condicion para que cambie algo en el estilo cuando tengo una pantalla pequeña)*/
 @media only screen and(max-width:500px){
     #wrapper {width:100%;}
+    iframe {width:100%;
+        height:75%;}
 }
