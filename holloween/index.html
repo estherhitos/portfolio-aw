@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--este diseño no es responive solo para pc-->
+    <link href="https://fonts.googleapis.com/css?family=Butcherman&display=swap" rel="stylesheet">
+    <style>
+        
+        body {background-color: rgb(43, 2, 2);}
+        #wrapper {position: relative;/*el wrapper se mueve para centrase*/
+            background-image: url(imagenes/fondo.jpg);
+            width:1456px; 
+            height:783px;
+            margin: auto;
+            border-radius: 200px;
+            box-shadow: rgb(25, 3, 39) 20px,20px,20px,20px,
+            rgb(217, 210, 221) -20px,-20px,-20px,20px,
+            rgb(168, 109, 204) 20px,-20px,-20px,20px,
+            rgb(120, 12, 187) -20px,20px,20px,20px ;        
+        }
+        h1 {position: absolute;/*lo que va dentro se mueve con el */
+            left:100px;
+            top:10px;
+            font-size: 200%;
+            color: darkred;
+            font-family: 'Butcherman', cursive;
+        }
+        #p1 {position: absolute;
+            top:150px;
+            left:80px;
+            font-size: 150%;
+            color: darkred;
+            font-family: 'Butcherman', cursive;     
+        }
+        #dor {position: absolute;
+        top:220px;
+        left:170px;
+        width: 170px;
+        height: 300px;
+        /*border:1px solid white;*/
+        }
+        #eye {position: absolute;
+        top:220px;
+        left:800px;
+        width: 170px;
+        height: 250px;
+        /*border:1px solid white;*/
+        }
+        #caldero {position: absolute;
+        top: 500px;
+        left:190;
+        visibility: hidden;
+        }
+        #cuervo {position: absolute;
+        top: 430px;
+        left: 600px;
+        visibility: hidden;
+        }
+        
+    </style>
+    <script>
+        function mostrar (id){
+            document.getElementById(id).style.visibility="visible";
+        }
+        function ocultar (id){
+            document.getElementById(id).style.visibility="hidden";
+        } 
+        function sonar (id){
+            
+            document.getElementById(id).play();
+        } 
+        function parar (id){
+            document.getElementById(id).pause();
+        }
+    </script>
+</head>
+<body>
+    <audio id="demo">
+        <source type="audio/mpeg" src="sonidos/halloween-bellshalloween.mp3">
+    </audio>
+    <audio id="man">
+        <source type="audio/mpeg" src="sonidos/halloween-terror-scream.mp3">
+    </audio>
+    <div id="wrapper">
+        <h1>SCARY HALLOWEEN PARTY</h1>
+        <p id="p1">knock at the door</p>
+        <div id="dor" ondblclick="mostrar('caldero');sonar('demo')"
+                    onclick="ocultar('caldero');parar('demo')" ></div>
+        <div id="eye" onmouseover="mostrar('cuervo');sonar('man')"
+                    onmouseout="ocultar('cuervo');parar('man')" ></div>
+        <img id="caldero" onclick="ocultar('caldero')" src="imagenes/Caldero-04.gif" height="200">
+        <img id="cuervo" src="imagenes/cuervo.gif" height="200">
+
+    </div>
+    
+</body>
+</html>

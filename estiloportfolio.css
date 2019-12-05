@@ -1,0 +1,47 @@
+/*este es el esyilo de portfolio de ester*/
+body{}
+#wrapper{width: 85%;
+            background-color: white;
+            margin: auto;}
+header{position: relative;/*para que el titulo que va dentro
+    lo pueda colocar con absolute donde quiera*/
+    background-image: url("imagenesportfolio/fondito.jpg");
+    background-size: cover;
+    /*cover adapta vien la imagen responsive pero la acorta*/
+    background-position: center;
+    /*como mi imagen tiene lo importante en el centro devo poner 
+    bakgraund-position para que cote de los lados*/
+    height: 600px;}
+#titulo {position: sticky;
+            width: 40%;
+            top: 600px;
+            /*OJO, raro: para que el navegador calcule bien el centro
+            donde poner el titulo, hay que indicar, estas cuatro cosas:*/
+            left: 300px;/*mirarlo para ponerlo a la derecha*/
+            right: 0px;
+            margin-left:auto;
+            margin-right:auto;
+            font-family: 'Russo One', sans-serif;
+            font-size: 1.5em;
+            background-color: rgba(51, 251, 248, 0.05);
+            color:rgb(254, 251, 255);
+            text-align: center;}
+            /*aqui empieza el estilo main*/
+            h1 {text-align: center;}
+            div.polaroid {
+                width: 40%;
+                background-color: white;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                margin-bottom: 25px;
+                float:left;
+                margin:4%;
+              }
+              div.polaroid:hover{
+                  opacity:0.5;}
+              div.container {
+                text-align: center;
+                padding: 10px 20px;}
+                
+                @media only sreen and (max-width:500px){
+                    div.polaroid {width:90%;}
+                }
